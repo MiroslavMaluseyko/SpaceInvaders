@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6237707795484709833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6237707795484709835}
+  - component: {fileID: 6237707795484709834}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: AudioManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6237707795484709835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237707795484709833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 170.98087, y: 270.7235, z: -458.45816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6237707795484709834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237707795484709833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a04f3d493ab1f48a976fdd6c1c09d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Laser
+    clip: {fileID: 8300000, guid: f18c893a559566346a871de7bcffc1eb, type: 3}
+    isSfx: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: InvaderShot
+    clip: {fileID: 8300000, guid: 1035a952a43a7f046a603ab50ab8d609, type: 3}
+    isSfx: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Splat
+    clip: {fileID: 8300000, guid: 91a892f17bee4cc49b19f93a8b7e8e7d, type: 3}
+    isSfx: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 94b724e3169ca49418a6ace8d453a66d, type: 3}
+    isSfx: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 6bffd168a7a2fe645aa16128dcbd46a7, type: 3}
+    isSfx: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 7b834b1f86de4094cb552459281e2e3d, type: 3}
+    isSfx: 0
+    loop: 1
+    source: {fileID: 0}
+  sfxVolume: 1
+  musicVolume: 1
