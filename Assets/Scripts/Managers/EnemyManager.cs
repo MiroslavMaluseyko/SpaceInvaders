@@ -42,6 +42,12 @@ public class EnemyManager : MonoBehaviour
                 InvadersGrid.Instance.TurnRow(invader.rowNumber);
             if(invader.transform.position.x >= borderRight.x - invader.size/2 && invader.direction.x > 0)
                 InvadersGrid.Instance.TurnRow(invader.rowNumber);
+            //Losing
+            if (invader.transform.position.y <= borderLeft.y)
+            {
+                GameManager.Instance.GameOver();
+                DestroyRaw(invader.rowNumber);
+            }
         }
     }
 
@@ -63,6 +69,15 @@ public class EnemyManager : MonoBehaviour
         foreach (var invader in invaders.FindAll(inv => inv.rowNumber == row))
         {
             invader.GetComponent<InvaderShooting>().IncShootChance(chanceIncPerRow);
+        }
+    }
+    
+    //destroy all row with number [row]
+    private void DestroyRaw(int row)
+    {
+        foreach (var invader in invaders.FindAll(inv => inv.rowNumber == row))
+        {
+            Destroy(invader);
         }
     }
 

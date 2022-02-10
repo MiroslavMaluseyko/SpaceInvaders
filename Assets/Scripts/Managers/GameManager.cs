@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         if (!gameStarted) StartCoroutine(StartGame());
+        if (PlayerPrefs.GetInt("FirstLoad") == 0)
+        {
+            FirstLoad();
+        }
     }
 
     //starts game after 3 seconds
@@ -52,12 +56,17 @@ public class GameManager : MonoBehaviour
         
         //play sound effect of losing
         AudioManager.Instance.Play("Explosion");
-        //stop gameplay
-        Time.timeScale = 0;
         //show game over menu
         MenuManager.Instance.GameOver();
     }
 
+    //set default setting on first load
+    public void FirstLoad()
+    {
+        PlayerPrefs.SetInt("AlreadyLoad", 1);
+        AudioManager.Instance.ChangeMusicVolume(1);
+        AudioManager.Instance.ChangeSfxVolume(1);
+    }
 
     
 }

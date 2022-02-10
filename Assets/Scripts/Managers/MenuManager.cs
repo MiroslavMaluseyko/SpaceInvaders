@@ -32,9 +32,9 @@ public class MenuManager : MonoBehaviour
     //change pause state, make time move, load gameplay scene
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         GameManager.Instance.gamePaused = false;
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     //pause option
@@ -76,6 +76,7 @@ public class MenuManager : MonoBehaviour
         {
             Instantiate(gameOverPrefab);
         }
+        GameManager.Instance.gamePaused = true;
         Time.timeScale = 0;
         GameOverUI.Instance.gameObject.SetActive(true);
     }
@@ -84,8 +85,8 @@ public class MenuManager : MonoBehaviour
     //make time move, load main menu
     public void ToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 
     //start game option
@@ -93,9 +94,9 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         
-        SceneManager.LoadScene("Gameplay");
         GameManager.Instance.gamePaused = false;
         Time.timeScale = 1;
+        SceneManager.LoadScene("Gameplay");
     }
 
     //quit option

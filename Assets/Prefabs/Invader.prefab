@@ -131,8 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  direction: {x: 1, y: -0.5}
+  direction: {x: 1, y: -0.7}
   destroyEffect: {fileID: 2853269816057787168, guid: 25cff39384b8b6d49aa471372c647e8d, type: 3}
+  size: 12
   rowNumber: 0
 --- !u!114 &-7475282218400735334
 MonoBehaviour:
