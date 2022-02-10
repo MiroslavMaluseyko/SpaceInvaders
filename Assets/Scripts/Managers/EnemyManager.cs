@@ -20,10 +20,6 @@ public class EnemyManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
-        foreach (var invader in invaders)
-        {
-            invader.size = GetComponent<SpriteRenderer>().size.x * invader.transform.localScale.x;
-        }
         
     }
 

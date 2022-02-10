@@ -29,6 +29,10 @@ public class InvadersGrid : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
+        foreach (var invader in prefabs)
+        {
+            invader.size = invader.GetComponent<SpriteRenderer>().size.x * invader.transform.localScale.x;
+        }
     }
 
     //get reference to invaders
@@ -48,6 +52,7 @@ public class InvadersGrid : MonoBehaviour
             {
                 Invader invaderPrefab = prefabs[Random.Range(0, prefabs.Length)];
                 //calculating height to spawn invader
+                Debug.Log(invaderPrefab.size);
                 float h = yOffset - invaderPrefab.size * i;
                 Vector3 pos = new Vector3( 0,h,0);
                 //create invader
